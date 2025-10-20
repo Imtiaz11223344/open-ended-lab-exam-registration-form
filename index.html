@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lab Exam — Create Your TechNova Account</title>
+  <style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial, sans-serif;
+  background:#0f1720;
+  color:#e6eef8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+}
+#page-wrap{
+  width:750px;
+  background:#0b1220;
+  padding:20px 25px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.05);
+  position:relative; 
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+header#top-header{
+  text-align:left;
+  margin-bottom:15px;
+}
+header#top-header h1{
+  font-size:22px;
+  color:#fff;
+}
+header#top-header .intro{
+  font-size:14px;
+  color:#bfc8d9;
+}
+header#top-header .tip{
+  font-size:12px;
+  color:#9aa6bd;
+  margin-top:4px;
+}
+form#signup-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.row{
+  display:flex;
+  gap:14px;
+}
+.form-group{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+label{
+  font-size:14px;
+  color:#cbd5e1;
+  margin-bottom:4px;
+}
+.required{
+  color:#ff6b6b;
+}
+input[type="text"],input[type="email"],input[type="password"],select,textarea{
+  background:#071122;
+  border:1px solid rgba(255,255,255,0.03);
+  color:#e6eef8;
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:13px;
+  outline:none;
+}
+input::placeholder,textarea::placeholder{color:#5f6b7a;}
+input:focus,select:focus,textarea:focus{
+  border-color:#2d8cff;
+  box-shadow:0 0 0 3px rgba(45,140,255,0.06);
+}
+small.hint{color:#9aa6bd;font-size:12px;margin-top:3px;}
+fieldset.form-section{
+  border:1px dashed rgba(240, 233, 233, 0.65);
+  padding:8px 10px;
+  border-radius:8px;
+}
+legend{padding:0 6px;color:#f4f5f5;font-weight:600;font-size:14px;}
+.radio-row,.checkbox-row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  padding-top:5px;
+}
+input[type="radio"],input[type="checkbox"]{
+  width:15px;
+  height:15px;
+  accent-color:#0f60d8;
+}
+textarea{
+  resize:none;
+  height:60px;
+}
+.form-actions{
+  display:flex;
+  justify-content:end;
+  gap:10px;
+  margin-top:5px;
+}
+.btn{
+  padding:8px 14px;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.btn-reset{
+  text-align:left;
+  background:#0b1720;
+  color:#bfc8d9;
+  border:1px solid rgba(255,255,255,0.05);
+}
+.btn-submit{
+  text-align:left;
+  background:linear-gradient(180deg,#2d8cff,#1b66c9);
+  color:white;
+}
+.btn-submit:hover{transform:translateY(-1px);}
+
+
+.corner-tag{
+  position:absolute;
+  top:-12px;
+  right:-12px;
+  background:#ffb400;
+  color:#000;
+  font-weight:700;
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:6px;
+  transform:rotate(8deg);
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);
+  z-index:40;
+}
+@media (max-width:760px){
+  #page-wrap{ width:92%; padding:16px; }
+  .row{ flex-direction:column; gap:10px; }
+  .corner-tag{ top:-10px; right:6px; transform:rotate(6deg); }
+}
+  </style>
+</head>
+<body>
+  <div id="page-wrap">
+    <div class="corner-tag">LAB EXAM</div>
+
+    <header id="top-header">
+      <h1>Create Your <em>TechNova</em> Account</h1>
+      <p class="intro">Welcome! Please complete the form below.</p>
+      <p class="tip">Tip: Press Ctrl+ or Ctrl- to zoom.</p>
+    </header>
+
+    <form id="signup-form" action="#" method="post">
+      <div class="row">
+        <div class="form-group">
+          <label for="fullname">Full Name <span class="required">*</span></label>
+          <input id="fullname" name="fullname" type="text" placeholder="e.g., Imtiaz Ali (FL23837)" required>
+          <small class="hint">Use your legal name.</small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input id="email" name="email" type="email" placeholder="numl-f23-20683@numls.edu.pk" required>
+          <small class="hint">We'll send a verification link.</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="password">Password <span class="required">*</span></label>
+          <input id="password" name="password" type="password" placeholder="At least 8 characters" minlength="8" required>
+          <small class="hint">Must be 8+ characters and include a number.</small>
+        </div>
+        <div class="form-group">
+          <label for="country">Country <span class="required">*</span></label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option>Pakistan</option>
+            <option>UK</option>
+            <option>USA</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="form-section">
+        <legend>Gender</legend>
+        <div class="radio-row">
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+          <label><input type="radio" name="gender" value="prefer"> Prefer Not to Say</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Skills <small style="color:#bfc8d9;font-weight:normal;font-size:0.85em;">(select all that apply)</small></legend>
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="skills" value="html"> HTML</label>
+          <label><input type="checkbox" name="skills" value="css"> CSS</label>
+          <label><input type="checkbox" name="skills" value="js"> JavaScript</label>
+          <label><input type="checkbox" name="skills" value="git"> Git</label>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="about">About You</label>
+        <textarea id="about" name="about" placeholder="Write a short bio..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="reset" class="btn btn-reset">Reset</button>
+        <button type="submit" class="btn btn-submit">Create Account</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
